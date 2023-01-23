@@ -55,11 +55,13 @@ nav {
 
 input[type="search"] {
 	background: transparent !important;
+	color:#fff !important;
 }
 
 
 input[type="text"] {
 	background-color: #40404f;
+	color:gray !important;
 	outline: none !important;
 	border: none !important;
 }

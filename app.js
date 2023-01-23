@@ -1,3 +1,3 @@
-// $(window).on("load", function () {
-// 	$("#exampleModalToggle").modal("show");
-// });
+$(window).on("load", function () {
+	$("#exampleModalToggle").modal("show");
+});
