@@ -256,17 +256,17 @@
 		</div> 
        
       <!-- MAIN CONTAINER -->
-		<div class="mainContainer d-flex">
+		<div class="mainContainer d-flex flex-column position-relative w-100">
             <div class="row">
 
 			<!-- Container left -->
-			<div class="left col h-100 col-lg-3 d-none d-lg-block ">
+			<div class="left col h-100 w-25 col-lg-3 d-none d-lg-block">
 				<div
 					class="navbarLg w-100 d-flex flex-column justify-content-between"
 				>
 					<form class="d-flex w-100 mt-2" role="search">
 						<input
-							class="form-control w-100  me-2 btn-outline-light"
+							class="form-control w-100 me-2  btn-outline-light"
 							type="search"
 							placeholder="+ New chat"
 							aria-label="Search"
@@ -299,12 +299,23 @@
 
 			<!-- CONTAINER RIGHT -->
 			<div
-				class="right col col-lg-9 col-sm-12  d-flex flex-column justify-content-between"
+				class="right w-75 col col-lg-7 col-sm-12 flex-column"
 			>
-				<h1 class="text-center">ChatGPT</h1>
+				<h1 class="titleH1 text-center">ChatGPT</h1>
+
+
+            <div id="listRadio">
+				<input type="radio" id="default" name="mode" value="default" checked="checked">
+				<label for="default">default</label>
+				<input type="radio" id="groot" name="mode" value="groot">
+				<label for="groot">groot</label>
+				<input type="radio" id="debugMe" name="mode" value="debugMe">
+				<label for="debugMe">debugMe</label>
+				
+			</div>
 
 				<!-- GRID -->
-				<div class="grid  container text-center">
+				<div class="grid  container text-center ">
 					<div class="row ">
 						<div class="col-sm-4">
 							<i class="bi bi-sun"></i>
@@ -344,24 +355,19 @@
 				</div>
 
 				<!-- form -->
-				<div class="">
-					<form class="bodySearch d-flex" role="search">
-						<input
-							class="form-control w-75 mx-auto"
-							type="text"
-							placeholder="|"
-							aria-label="Text"
-                            
-						/>
-                        <!-- <i class="bi bi-send-fil"></i> -->
-					</form>
+				<div class="questionTextarea flex position-absolute bottom-3   w-75 ms-5 align-content-center justify-content-center ">
+				<textarea id="question"></textarea>
+				<button id="btnTextarea" onclick="addQuestion(1)">envoi</button>
+			    </div>
 					<div>
-						<p class="textBottom container w-75  text-center ">
+						<div id="boxQuestion"></div>
+						<p class="textBottom container position-absolute bottom-0 mb-3  w-75  text-center ">
 							<u>ChatGPT Dec 15 Verision.</u> Free Research Preview.
 							Our goal is to make AI systemes more natural and safe to
 							interact with. Your feedback will help us improve.
 						</p>
 					</div>
+					
 				</div>
 			</div>
         </div>

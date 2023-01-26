@@ -1,0 +1,59 @@
+****** PSEUDO CODE ******
+
+//Récupérer les données de l'utilisateur
+Creation de de 3 inputs radio
+
+
+//Comparer les données
+ On vérifie la valeur de la case cochée
+
+ Si la case GRoot est cochée alors il va automatiquement dans l'index questions[2]
+ et affiche une réponse aléatoire -> method math.random() pour les ponctuations
+
+ Si la case Debug est cochée alors il va automatiquement dans l'index questions[1]
+ et affiche une réponse aléatoire -> method math.random()
+
+ Si la case prédéfinie est cochée alors il va automatiquement dans l'index questions[0]
+ on compare question.value == data.keywords -> methode includes("homme")&& .inccludes("fort") && .includes("monde")
+
+// Afficher les données
+Ajouter la fonction setTimeout()
+Afficher la réponse en dessous de la question
+
+Debug Me
+Ça marche pas ?
+
+var debugMeArray = ["Pourquoi ?",
+"Reformule ta question.",
+"Reformule ta problématique.",
+"Est-ce que tu es sûr de ce que tu as écrit ?",
+"As-tu affiché du debug (console.log en JS, print_r ou var_dump en PHP, ...) ?",
+"Est-ce que le fichier est bien appelé ?",
+"Où est ton fichier ?",
+"Où est la déclaration de ta fonction ?",
+"Où exécutes-tu ta fonction ?",
+"Où est la déclaration de ta variable ?",
+"Qu'y a-t-il dans ta variable ?",
+"Décris-moi ce que tu veux faire en langage courant.",
+"Que fait ton code ?",
+"Tu as regardé sur Google ?",
+"Google est ton ami ;)",
+"Il manquerait pas un point-virgule ou une parenthèse ?",
+"Est-ce que ton code est bien indenté ?",
+"As-tu regardé dans l'inspecteur du navigateur ?",
+"Prends un papier et un crayon ;)",
+"Fais une pause :)",
+"Que fait cette fonction ?"];
+
+
+1 : Quelle est la capitale de l’Egypte ? la capitale de l’Egypte est le Caire
+2 : Qui a inventé l’électricité ? C’est thomas edisson
+3 : Qui est le premier roi de France ? Le premier roi de France est Clovis
+4 : Quelle est la date de la première guerre mondiale ? La date de la première guerre mondiale est de 1914 à 1918
+5 : Quel pays a le plus de victoire militaire ? C’est la France avec 1115 batailles gagné
+6 : Combien y a-t-il de planètes dans notre système solaire ? Il y a 9 planètes dans notre système solaire.
+7 : Ou vivent les dieux grecs ? Les dieux grecs vivent sur le mont olympe 
+8 : Qui est le joueur de foot avec le plus de ballon d’or ? C’est Lionel Messi qui a le plus de ballon d’or avec 7 à son actif
+9 : Combien y a-t-il de pays dans l’union européenne ? L’Union européenne réunit 27 pays depuis le départ du Royaume-Uni le 31 janvier 2020
+10 : Quelle est la plus ancienne civilisation ?  La première civilisation à avoir émergé sur la planète Terre depuis l’évolution de l’être humain est la Civilisation mésopotamienne.
+11 : Quel est l’album le plus vendu de tous les temps ? C’est triller de Michel Jackson avec 100 millions d’exemplaires.
