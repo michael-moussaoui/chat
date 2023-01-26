@@ -1,14 +1,9 @@
 const data = [
 	{
-		isGroot: false,
-		isDebug: false,
-
 		keywords: "egypte capitale",
 		response: "la capitale de l’Egypte est le Caire",
 	},
 	{
-		isGroot: false,
-		isDebug: true,
 		debugMeArray: [
 			"Pourquoi ?",
 			"Reformule ta question.",
@@ -46,9 +41,9 @@ const data = [
 ];
 
 //Affiche les modales au chargement de la page
-$(window).on("load", function () {
-	$("#exampleModalToggle").modal("show");
-});
+// $(window).on("load", function () {
+// $("#exampleModalToggle").modal("show");
+// });
 
 const question = document.getElementById("question");
 const boxQuestion = document.getElementById("boxQuestion");
@@ -71,13 +66,36 @@ function addQuestion(e) {
 //Récupère tous les inputs radio
 const allBtnRadio = document.querySelectorAll("#listRadio input");
 
+// Récupère une donnée aléatoire sur le tableau groot
+function getRandomGroot() {
+	const randomGroot =
+		data[2].groot[Math.floor(Math.random() * data[2].groot.length)];
+	return randomGroot;
+}
+// Récupère une donnée aléatoire sur le tableau arrayDebugMe
+function getRandomDebugMe() {
+	const randomDebugMe =
+		data[1].debugMeArray[
+			Math.floor(Math.random() * data[1].debugMeArray.length)
+		];
+	return randomDebugMe;
+}
+
 //Boucle pour récupérer la valeur de l'input selectionné
 allBtnRadio.forEach((btnRadio) => {
 	btnRadio.addEventListener("change", function (e) {
-		if (e.target.value === "groot") {
-			alert("je s'appelle groot");
-		} else {
-			alert(e.target.value);
+		//Récupère la valeur de l'input sélectionner
+		//Affiche une donnée aléatoire correspondante au tableau de l'input
+		switch (e.target.value) {
+			case "groot":
+				const test = getRandomGroot();
+				console.log(test);
+				break;
+
+			case "debugMe":
+				const testDebugME = getRandomDebugMe();
+				console.log(testDebugME);
+				break;
 		}
 	});
 });

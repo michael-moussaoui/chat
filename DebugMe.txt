@@ -7,6 +7,10 @@ Creation de de 3 inputs radio
 //Comparer les données
  On vérifie la valeur de la case cochée
 
+ On recupère la question via le textarea
+
+
+
  Si la case GRoot est cochée alors il va automatiquement dans l'index questions[2]
  et affiche une réponse aléatoire -> method math.random() pour les ponctuations
 
