@@ -6,20 +6,24 @@ Creation de de 3 inputs radio
 
 //Comparer les données
  On vérifie la valeur de la case cochée
-
  On recupère la question via le textarea
+ On stocke la réponse dans un tableau (split()) = 
+ On
+ Si la case prédéfinie est cochée alors il va boucler dans l'index data[0]
+ on compare question.value == data.keywords -> methode includes("homme")&& .inccludes("fort") && .includes("monde")
+ si includes() == true alors on affiche data.response
+ sinon on affiche un message indiquant que la question n'a pas de réponse
 
 
 
- Si la case GRoot est cochée alors il va automatiquement dans l'index questions[2]
+
+ Si la case GRoot est cochée alors il va automatiquement dans l'index data[2]
  et affiche une réponse aléatoire -> method math.random() pour les ponctuations
 
- Si la case Debug est cochée alors il va automatiquement dans l'index questions[1]
+ Si la case Debug est cochée alors il va automatiquement dans l'index data[1]
  et affiche une réponse aléatoire -> method math.random()
 
- Si la case prédéfinie est cochée alors il va automatiquement dans l'index questions[0]
- on compare question.value == data.keywords -> methode includes("homme")&& .inccludes("fort") && .includes("monde")
-
+ 
 // Afficher les données
 Ajouter la fonction setTimeout()
 Afficher la réponse en dessous de la question
