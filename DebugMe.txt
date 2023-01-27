@@ -14,7 +14,13 @@ Creation de de 3 inputs radio
  si includes() == true alors on affiche data.response
  sinon on affiche un message indiquant que la question n'a pas de réponse
 
-
+//découpe de la question utilisateur:
+On stock la réponse dans un tableau avec la méthode (split());
+Cette fonction va découper la réponse en plusieurs mots,
+et on compare chaque element du tableau arrayQuestion avec chaque élement du tableau data[0].keywords
+si on trouve: un élement identique, on met un compteur = 1;
+si notre compteur == keyworlds.length alors on affiche la réponse data[0].keywords[i].
+sinon on affiche une erreur.
 
 
  Si la case GRoot est cochée alors il va automatiquement dans l'index data[2]

@@ -1,4 +1,5 @@
-const questio = "qui est le plus fort , le plus beau et inteligent ?";
+const questio =
+	"quelle est la capitale qui pourrait être dans le pays egypte ?";
 const questioArray = questio.split(" ");
 
 var data = [
@@ -89,6 +90,19 @@ function addQuestion(e) {
 	//Rajoute la div avec le contenu de la question
 
 	newBoxQuestion.innerText = question.value;
+
+	//ici j'utilise la variable userQuestion, je stock toutes les question user dans une variable.
+	// const userQuestion = question.value;
+	// userQuestion.forEach((question)=>{
+	// 	if (verifQuestion =userQuestion.includes(data[0]) && userQuestion.includes("capitale");) {
+
+	// 	}
+	// })
+
+	// console.log(verifQuestion);
+
+	//console.log(question.value.includes("capitale" & "egypte"));
+
 	document.querySelector("#boxQuestion").appendChild(newBoxQuestion);
 	question.value = "";
 	document.querySelector(".titleH1").style.display = "none";
