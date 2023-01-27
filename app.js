@@ -1,8 +1,7 @@
-const questio =
-	"quelle est la capitale qui pourrait être dans le pays egypte ?";
+const questio = "qui est le plus fort , le plus beau et inteligent ?";
 const questioArray = questio.split(" ");
 
-const data = [
+var data = [
 	{
 		keywords: ["egypte", "capitale"],
 		response: "la capitale de l’egypte est le Caire",
@@ -10,6 +9,10 @@ const data = [
 	{
 		keywords: ["blague", "carambar"],
 		response: "la tête a toto",
+	},
+	{
+		keywords: ["beau", "fort", "inteligent"],
+		response: "ali",
 	},
 	{
 		debugMeArray: [
@@ -48,18 +51,25 @@ const data = [
 	},
 ];
 
-const matchWord = function (input, data) {
-	input.forEach((keywordUser) => {
-		if (keywordUser === data[0].keywords[1]) {
-			console.log("mot clé : ", keywordUser);
-		} else {
-			console.log("rien");
-		}
+// const matchWords = () => {
+// 	questioArray.forEach((word) => {
 
-		// console.log(keywordUser);
-	});
-};
-matchWord(questioArray, data);
+// 		search(word);
+// 	});
+// };
+
+// function search(word) {
+// 	data.forEach((row, index) => {
+// 		for (let i = 0; i < row.keywords.length; i++) {
+// 			if (row.keywords[i] === word) {
+// 				console.log("voici la réponse:", row.response);
+// 			} else {
+// 				console.log("NOT MATCH");
+// 			}
+// 		}
+// 	});
+// }
+// matchWords();
 
 //Affiche les modales au chargement de la page
 // $(window).on("load", function () {
@@ -77,7 +87,7 @@ function addQuestion(e) {
 	newBoxQuestion.setAttribute("class", `box`);
 
 	//Rajoute la div avec le contenu de la question
-	let words = false;
+
 	newBoxQuestion.innerText = question.value;
 	document.querySelector("#boxQuestion").appendChild(newBoxQuestion);
 	question.value = "";
@@ -109,21 +119,43 @@ allBtnRadio.forEach((btnRadio) => {
 		//Récupère la valeur de l'input sélectionner
 		//Affiche une donnée aléatoire correspondante au tableau de l'input
 		switch (e.target.value) {
+			case "default":
+				// const test = getRandomGroot();
+				ToastDefault.showToast();
+				break;
+
 			case "groot":
-				const test = getRandomGroot();
-				console.log(test);
+				// const test = getRandomGroot();
+				ToastGroot.showToast();
+
 				break;
 
 			case "debugMe":
-				const testDebugME = getRandomDebugMe();
-				console.log(testDebugME);
+				ToastDebug.showToast();
+				// const testDebugME = getRandomDebugMe();
 				break;
 		}
 	});
 });
+let ToastGroot = Toastify({
+	text: "je s'appelle Groot",
+	duration: 2000,
+	style: {
+		background: "linear-gradient(to right, #00b09b, #96c93d)",
+	},
+});
+let ToastDebug = Toastify({
+	text: "Mode DebugMe",
+	duration: 2000,
+	style: {
+		background: "linear-gradient(to right, #00b09b, #96c93d)",
+	},
+});
 
-console.log(data[2]);
-
-//console.log(question.value);
-
-//console.log(data[2].groot.includes('groot?'));
+let ToastDefault = Toastify({
+	text: "Mode normal",
+	duration: 2000,
+	style: {
+		background: "linear-gradient(to right, #00b09b, #96c93d)",
+	},
+});

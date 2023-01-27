@@ -73,8 +73,10 @@ input[type="text"] {
 	outline: none !important;
 	border: none !important;
 }
+/******** RIGHT **********/
+
 .right {
-	/* background-color: red; */
+	
 	overflow: hidden;
 	margin: 0;
 	width: 75%;
