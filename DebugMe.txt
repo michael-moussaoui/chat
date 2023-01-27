@@ -29,18 +29,17 @@ sinon on affiche une erreur.
  Si la case Debug est cochée alors il va automatiquement dans l'index data[1]
  et affiche une réponse aléatoire -> method math.random()
 
-<<<<<<< HEAD
- 
-=======
  Si la case prédéfinie est cochée alors il va automatiquement dans l'index questions[0]
  on compare question.value == data.keywords -> methode includes("homme")&& .inccludes("fort") && .includes("monde")
 
 
 
->>>>>>> 39e79f1ac37ed5c047002cb7a0279071e5eacf3a
-// Afficher les données
-Ajouter la fonction setTimeout()
-Afficher la réponse en dessous de la question
+//Ajouter un element a une variable:
+Je crée une fonction search qui va chercher une clée : world.
+
+
+
+
 
 Debug Me
 Ça marche pas ?
