@@ -1,6 +1,13 @@
+const questio = 'quelle est la capitle qui pourrait etre dans le pays Egypte ?';
+console.log(questio.split(" "))
+
+
+
 const data = [
 	{
-		keywords: "egypte capitale",
+		keywords: [ 
+			"egypte","capitale"
+				],
 		response: "la capitale de l’Egypte est le Caire",
 	},
 	{
@@ -58,12 +65,17 @@ function addQuestion(e) {
 	//Rajoute la div avec le contenu de la question
 	newBoxQuestion.innerText = question.value;
 
-	const verifQuestion =(question.value).includes("france") && (question.value).includes("capitale");
-    console.log(verifQuestion);
+	//ici j'utilise la variable userQuestion, je stock toutes les question user dans une variable.
+	// const userQuestion = question.value;
+	// userQuestion.forEach((question)=>{
+	// 	if (verifQuestion =userQuestion.includes(data[0]) && userQuestion.includes("capitale");) {
+			
+	// 	}
+	// })
+	
+	
+    // console.log(verifQuestion);
 
-	if (condition) {
-		
-	}
 
 	//console.log(question.value.includes("capitale" & "egypte"));
 	document.querySelector("#boxQuestion").appendChild(newBoxQuestion);

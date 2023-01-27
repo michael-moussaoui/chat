@@ -6,10 +6,15 @@ Creation de de 3 inputs radio
 
 //Comparer les données
  On vérifie la valeur de la case cochée
-
  On recupère la question via le textarea
 
-
+//découpe de la question utilisateur:
+On stock la réponse dans un tableau avec la méthode (split());
+Cette fonction va découper la réponse en plusieurs mots,
+et on compare chaque element du tableau arrayQuestion avec chaque élement du tableau data[0].keywords
+si on trouve: un élement identique, on met un compteur = 1;
+si notre compteur == keyworlds.length alors on affiche la réponse data[0].keywords[i].
+sinon on affiche une erreur.
 
  Si la case GRoot est cochée alors il va automatiquement dans l'index questions[2]
  et affiche une réponse aléatoire -> method math.random() pour les ponctuations
