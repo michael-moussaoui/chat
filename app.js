@@ -79,12 +79,6 @@ function addQuestion(e) {
 	//Rajoute la div avec le contenu de la question
 	let words = false;
 	newBoxQuestion.innerText = question.value;
-
-	console.log(
-		question.value.includes("test") &&
-			question.value.includes("hello") &&
-			question.value.includes("bing")
-	);
 	document.querySelector("#boxQuestion").appendChild(newBoxQuestion);
 	question.value = "";
 	document.querySelector(".titleH1").style.display = "none";
@@ -129,3 +123,7 @@ allBtnRadio.forEach((btnRadio) => {
 });
 
 console.log(data[2]);
+
+//console.log(question.value);
+
+//console.log(data[2].groot.includes('groot?'));
