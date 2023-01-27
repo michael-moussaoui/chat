@@ -57,11 +57,22 @@ function addQuestion(e) {
 
 	//Rajoute la div avec le contenu de la question
 	newBoxQuestion.innerText = question.value;
+
+	const verifQuestion =(question.value).includes("france") && (question.value).includes("capitale");
+    console.log(verifQuestion);
+
+	if (condition) {
+		
+	}
+
+	//console.log(question.value.includes("capitale" & "egypte"));
 	document.querySelector("#boxQuestion").appendChild(newBoxQuestion);
 	question.value = "";
 	document.querySelector(".titleH1").style.display = "none";
 	document.querySelector(".grid").style.display = "none";
 }
+
+
 
 //Récupère tous les inputs radio
 const allBtnRadio = document.querySelectorAll("#listRadio input");
@@ -99,3 +110,9 @@ allBtnRadio.forEach((btnRadio) => {
 		}
 	});
 });
+
+
+//console.log(question.value);
+
+
+//console.log(data[2].groot.includes('groot?'));

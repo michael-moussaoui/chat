@@ -20,6 +20,8 @@ Creation de de 3 inputs radio
  Si la case prédéfinie est cochée alors il va automatiquement dans l'index questions[0]
  on compare question.value == data.keywords -> methode includes("homme")&& .inccludes("fort") && .includes("monde")
 
+
+
 // Afficher les données
 Ajouter la fonction setTimeout()
 Afficher la réponse en dessous de la question
