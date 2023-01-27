@@ -9,13 +9,26 @@ var data = [
 	},
 	{
 		keywords: ["blague", "carambar"],
-		response: "la tête a toto",
+		response: "Combien font 0 + 0 ? la tête a toto",
 	},
 	{
 		keywords: ["beau", "fort", "inteligent"],
 		response: "ali",
 	},
 	{
+		keywords: ["homme", "rapide", "monde"],
+		response: "Usan Bolt",
+	},
+	{
+		keywords: ["style", "musique", "quel"],
+		response: "j'écoute de la musique latine",
+	},
+	{
+		keywords: ["plat", "préféré", "repas"],
+		response: "J'adore les lasagnes",
+	},
+	{
+		keywords: [],
 		debugMeArray: [
 			"Pourquoi ?",
 			"Reformule ta question.",
@@ -41,6 +54,7 @@ var data = [
 		],
 	},
 	{
+		keywords: [],
 		groot: [
 			"groot!!!",
 			"groot...",
@@ -52,25 +66,24 @@ var data = [
 	},
 ];
 
-// const matchWords = () => {
-// 	questioArray.forEach((word) => {
+const matchWords = () => {
+	questioArray.forEach((word) => {
+		search(word);
+	});
+};
 
-// 		search(word);
-// 	});
-// };
-
-// function search(word) {
-// 	data.forEach((row, index) => {
-// 		for (let i = 0; i < row.keywords.length; i++) {
-// 			if (row.keywords[i] === word) {
-// 				console.log("voici la réponse:", row.response);
-// 			} else {
-// 				console.log("NOT MATCH");
-// 			}
-// 		}
-// 	});
-// }
-// matchWords();
+function search(word) {
+	data.forEach((row, index) => {
+		for (let i = 0; i < row.keywords.length; i++) {
+			if (row.keywords[i] === word) {
+				console.log("voici la réponse:", row.response);
+			} else {
+				console.log("NOT MATCH");
+			}
+		}
+	});
+}
+matchWords();
 
 //Affiche les modales au chargement de la page
 // $(window).on("load", function () {
@@ -148,6 +161,9 @@ allBtnRadio.forEach((btnRadio) => {
 				ToastDebug.showToast();
 				// const testDebugME = getRandomDebugMe();
 				break;
+
+			default:
+				console.log("rien");
 		}
 	});
 });
