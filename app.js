@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const questio = 'quelle est la capitle qui pourrait etre dans le pays Egypte ?';
 console.log(questio.split(" "))
 
@@ -9,6 +10,20 @@ const data = [
 			"egypte","capitale"
 				],
 		response: "la capitale de l’Egypte est le Caire",
+=======
+const questio =
+	"quelle est la capitale qui pourrait être dans le pays egypte ?";
+const questioArray = questio.split(" ");
+
+const data = [
+	{
+		keywords: ["egypte", "capitale"],
+		response: "la capitale de l’egypte est le Caire",
+	},
+	{
+		keywords: ["blague", "carambar"],
+		response: "la tête a toto",
+>>>>>>> 389ffc4798f62a408197df4b96ca490d92e66e28
 	},
 	{
 		debugMeArray: [
@@ -47,6 +62,19 @@ const data = [
 	},
 ];
 
+const matchWord = function (input, data) {
+	input.forEach((keywordUser) => {
+		if (keywordUser === data[0].keywords[1]) {
+			console.log("mot clé : ", keywordUser);
+		} else {
+			console.log("rien");
+		}
+
+		// console.log(keywordUser);
+	});
+};
+matchWord(questioArray, data);
+
 //Affiche les modales au chargement de la page
 // $(window).on("load", function () {
 // $("#exampleModalToggle").modal("show");
@@ -63,7 +91,9 @@ function addQuestion(e) {
 	newBoxQuestion.setAttribute("class", `box`);
 
 	//Rajoute la div avec le contenu de la question
+	let words = false;
 	newBoxQuestion.innerText = question.value;
+<<<<<<< HEAD
 
 	//ici j'utilise la variable userQuestion, je stock toutes les question user dans une variable.
 	// const userQuestion = question.value;
@@ -78,13 +108,13 @@ function addQuestion(e) {
 
 
 	//console.log(question.value.includes("capitale" & "egypte"));
+=======
+>>>>>>> 389ffc4798f62a408197df4b96ca490d92e66e28
 	document.querySelector("#boxQuestion").appendChild(newBoxQuestion);
 	question.value = "";
 	document.querySelector(".titleH1").style.display = "none";
 	document.querySelector(".grid").style.display = "none";
 }
-
-
 
 //Récupère tous les inputs radio
 const allBtnRadio = document.querySelectorAll("#listRadio input");
@@ -123,8 +153,8 @@ allBtnRadio.forEach((btnRadio) => {
 	});
 });
 
+console.log(data[2]);
 
 //console.log(question.value);
-
 
 //console.log(data[2].groot.includes('groot?'));
