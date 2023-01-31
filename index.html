@@ -74,6 +74,18 @@
                             <div
                             class="container ps-3 d-flex flex-column justify-content-start align-content-start text-white"
                             >
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="radio" id="default" name="mode" value="default" checked="checked">
+								<label class="form-check-label" for="default">default</label>
+							</div>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="radio" id="groot" name="mode" value="groot">
+								<label class="form-check-label" for="groot">groot</label>
+							</div>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="radio" id="debugMe" name="mode" value="debugMe">
+								<label class="form-check-label" for="debugMe">debugMe</label>
+							</div>
                             <hr>
                                 <div class="mode w-100 d-flex justify-content-start mt-3">
                                     <i class="bi bi-moon"></i>
@@ -258,11 +270,10 @@
 		</div> 
        
       <!-- MAIN CONTAINER -->
-		<div class="mainContainer d-flex flex-column position-relative w-100">
-            <div class="row">
-
+		<div class="mainContainer container-fluid d-flex flex-column position-relative w-100 ">
+            <div class="row ">
 			<!-- Container left -->
-			<div class="left col h-100 w-25 col-lg-3 d-none d-lg-block">
+			  <div class="left col h-100 w-25 col-lg-3  d-none d-lg-block position-relative">
 				<div
 					class="navbarLg w-100 d-flex flex-column justify-content-between"
 				>
@@ -278,6 +289,18 @@
 					<div
                     class="container ps-3 d-flex flex-column justify-content-start align-content-start text-white"
 					>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="radio" id="default" name="mode" value="default" >
+						<label class="form-check-label" for="default">default</label>
+					</div>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="radio" id="groot" name="mode" value="groot">
+						<label class="form-check-label" for="groot">groot</label>
+					</div>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="radio" id="debugMe" name="mode" value="debugMe">
+						<label class="form-check-label" for="debugMe">debugMe</label>
+					</div>
                     <hr>
 						<div class="mode w-100 d-flex justify-content-start mt-3">
 							<i class="bi bi-moon"></i>
@@ -301,21 +324,14 @@
 
 			<!-- CONTAINER RIGHT -->
 			<div
-				class="right w-75 col col-lg-7 col-sm-12 flex-column"
+				class="right w-75 h-100 col col-lg-7 col-md-12 col-sm-12 flex-column position-relative d-flex justify-content-between "
 			>
+			<div class="rightUp h-75 ">
+				<div id="boxQuestion"></div>
+				<div id="boxResponse"></div>
 				<h1 class="titleH1 text-center">ChatGPT</h1>
 
-
-            <div id="listRadio ">
-				<input type="radio" id="default" name="mode" value="default" checked="checked">
-				<label for="default">default</label>
-				<input type="radio" id="groot" name="mode" value="groot">
-				<label for="groot">groot</label>
-				<input type="radio" id="debugMe" name="mode" value="debugMe">
-				<label for="debugMe">debugMe</label>
 				
-			</div>
-
 				<!-- GRID -->
 				<div class="grid  container text-center ">
 					<div class="row ">
@@ -354,25 +370,32 @@
 							<p>Limited knowledge of world and events after 2021</p>
 						</div>
 					</div>
-				</div>
-
-				<!-- form -->
-				<div class="questionTextarea flex position-absolute bottom-3   w-75 ms-5 align-content-center justify-content-center ">
-				<textarea id="question"></textarea>
-				<button id="btnTextarea" onclick="addQuestion(1)">envoi</button>
-			    </div>
-					<div>
-						<div id="boxQuestion"></div>
-						<p class="textBottom container position-absolute bottom-0 mb-3  w-75  text-center ">
-							<u>ChatGPT Dec 15 Verision.</u> Free Research Preview.
-							Our goal is to make AI systemes more natural and safe to
-							interact with. Your feedback will help us improve.
-						</p>
-					</div>
 					
 				</div>
 			</div>
-        </div>
+
+				<!-- form -->
+				<div class="rightBottom h-25 ">
+				<div class="questionTextarea position-relative flex d-flex rounded-3  w-75  bottom-0  align-content-center justify-content-between mx-auto ">
+					
+					<textarea id="question" class="position-relative ">
+					</textarea>
+					<button id="btnTextarea" class="btnSend position-relative me-2 end-0 bg-transparent border-0 rounded-3 " onclick="addQuestion(1)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+						<path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+					  </svg></button>
+				</div>
+						<div>
+							
+							<p class="textBottom container  bottom-0   w-75  text-center ">
+								<u>ChatGPT Dec 15 Verision.</u> Free Research Preview.
+								Our goal is to make AI systemes more natural and safe to
+								interact with. Your feedback will help us improve.
+							</p>
+						</div>
+					
+					</div>
+			      </div>
+             </div>
 		</div>
 	</body>
 	<!-- JavaScript Bundle with Popper -->
