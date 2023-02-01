@@ -53,7 +53,7 @@ body {
 
 .navbarLg{
     background-color: #202123;
-	 height: 100vh !important; */
+	 height: 100vh !important;
 
 }
 
@@ -204,4 +204,13 @@ textarea:focus {
 
 	background-color: #254;
 	border: 2px solid blue;
+}
+
+
+.text-white{
+	background-color: rgb(184, 179, 179);
+}
+
+.justify-content-between {
+	background-color:rgb(184, 179, 179);
 }
